@@ -31,3 +31,11 @@ pytube
 numexpr
 duckduckgo-search
 huggingface_hub
+streamlit
+langchain
+langchain-groq
+langchain-community
+duckduckgo-search
+wikipedia
+arxiv
+python-dotenv
