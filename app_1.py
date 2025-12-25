@@ -4,6 +4,7 @@ import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_community.utilities import ArxivAPIWrapper, WikipediaAPIWrapper
 from langchain_community.tools import DuckDuckGoSearchRun
+from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 from langchain.agents import create_agent
 from langchain.tools import tool
 from langchain_core.messages import HumanMessage, AIMessage
@@ -125,4 +126,5 @@ Use tools when needed. Respond concisely with final answer."""
         st.markdown(final_response)
         
         # Save to session
+
         st.session_state.messages.append({"role": "assistant", "content": f"**Tools Used:** {', '.join(tool_usage)}\n\n**Answer:** {final_response}"})
