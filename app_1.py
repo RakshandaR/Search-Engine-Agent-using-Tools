@@ -18,7 +18,7 @@ st.title("🧠 LangChain Agent - Tools & Reasoning")
 
 # Sidebar
 st.sidebar.title("Settings")
-api_key = st.sidebar.text_input("Enter your Groq API Key:", type="password", value=groq_api_key or "")
+api_key = st.sidebar.text_input("Enter your Groq API Key:", type="password")
 
 if not api_key:
     st.info("Please add your Groq API key in the sidebar.")
@@ -128,3 +128,4 @@ Use tools when needed. Respond concisely with final answer."""
         # Save to session
 
         st.session_state.messages.append({"role": "assistant", "content": f"**Tools Used:** {', '.join(tool_usage)}\n\n**Answer:** {final_response}"})
+
