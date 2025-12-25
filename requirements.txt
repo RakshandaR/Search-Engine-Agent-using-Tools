@@ -39,3 +39,4 @@ duckduckgo-search
 wikipedia
 arxiv
 python-dotenv
+ddgs
